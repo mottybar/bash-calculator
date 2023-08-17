@@ -1,9 +1,5 @@
 #!/bin/bash 
 
-add (){
-
-    echo "ok"
-}
 
 
 menu () {
