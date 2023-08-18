@@ -31,6 +31,16 @@ if ( num_of_arg_validation $1 $2 $3 );then
 fi
 }
 
+divide(){
+if ( num_of_arg_validation $1 $2 $3 );then
+        if ( (is_integer $1) && (is_integer $2)  );then
+                echo $(($1 / $2))
+        fi
+fi
+}
+
+
+
 #is_integer $1
 #num_of_arg_validation $1 $2 $3 
-multiply $1 $2 $3
+divide $1 $2 $3
