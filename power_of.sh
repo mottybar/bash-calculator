@@ -17,3 +17,4 @@ read -p "enter the exponent: " exponent
 
 result=$(power_of $base $exponent)
 echo "result: $result"
+
