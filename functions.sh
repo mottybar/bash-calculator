@@ -1,6 +1,6 @@
 #!/bin/bash
 
-num_of_arg_validation(){
+num_of_arg(){
 #check if number of arguments equal to 2
 if [[ $# -eq 2 ]];then
 	echo "Argument received: $1 $2"
@@ -19,12 +19,10 @@ else
 	echo "$1 isn't integer"
 	return 1
 fi
-
-
 }
 
 multiply() {
-if ( num_of_arg_validation $1 $2 $3 );then
+if ( num_of_arg $1 $2 $3 );then
 	if ( (is_integer $1) && (is_integer $2)  );then
         	echo $(($1 * $2))
 	fi
@@ -32,9 +30,9 @@ fi
 }
 
 divide(){
-if ( num_of_arg_validation $1 $2 $3 );then #check if number of arguments is 2
+if ( num_of_arg $1 $2 $3 );then #check if number of arguments is 2
         if ( (is_integer $1) && (is_integer $2) );then #check if the arguments are integers
-		if (( $2 != 0 ));then  # check if the second argument is not 0 
+		if (( $2 != 0 )) ;then  # check if the second argument is not 0 
                 	echo $(($1 / $2))
 		else
 			echo "cannot divide by 0"
@@ -46,5 +44,5 @@ fi
 
 
 #is_integer $1
-#num_of_arg_validation $1 $2 $3 
+#num_of_arg $1 $2 $3 
 divide $1 $2 $3
