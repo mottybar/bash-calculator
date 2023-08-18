@@ -33,8 +33,12 @@ fi
 
 divide(){
 if ( num_of_arg_validation $1 $2 $3 );then
-        if ( (is_integer $1) && (is_integer $2)  );then
-                echo $(($1 / $2))
+        if ( (is_integer $1) && (is_integer $2) );then
+		if (( $2 != 0 ));then
+                	echo $(($1 / $2))
+		else
+			echo "cannot divide by 0"
+		fi
         fi
 fi
 }
