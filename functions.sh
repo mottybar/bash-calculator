@@ -32,9 +32,9 @@ fi
 }
 
 divide(){
-if ( num_of_arg_validation $1 $2 $3 );then
-        if ( (is_integer $1) && (is_integer $2) );then
-		if (( $2 != 0 ));then
+if ( num_of_arg_validation $1 $2 $3 );then #check if number of arguments is 2
+        if ( (is_integer $1) && (is_integer $2) );then #check if the arguments are integers
+		if (( $2 != 0 ));then  # check if the second argument is not 0 
                 	echo $(($1 / $2))
 		else
 			echo "cannot divide by 0"
