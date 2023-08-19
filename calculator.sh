@@ -175,8 +175,8 @@ while true; do
 
         echo "================================================================"
         echo "Result: $res"
-        echo $(is_prime $res)
-        echo $(is_odd_even $res)
+        is_prime $res
+        is_odd_even $res
        is_div_by_five $res
 
 
