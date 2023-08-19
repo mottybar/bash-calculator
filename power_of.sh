@@ -12,9 +12,3 @@ power_of() {
         echo $result
 }
 
-read -p "enter the base: " base
-read -p "enter the exponent: " exponent
-
-result=$(power_of $base $exponent)
-echo "result: $result"
-
