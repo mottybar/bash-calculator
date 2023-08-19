@@ -6,10 +6,7 @@
 
 add() {
 result=$(( $1 + $2 ))
-#echo "Result: $result"
-#is_prime "$result" && echo "Prime number"
-#echo "Number is: $(is_odd_even "$result")"
-#echo "$(is_div_by_five "$result")"
+
 echo $result
 }
 
@@ -160,7 +157,7 @@ while true; do
             read -p "Enter first number: " num1
             read -p "Enter second number: " num2
             
-                if  is_integer $num1 && is_integer $num2 ; then
+               if  is_integer $num1 && is_integer $num2 ; then
 
                     case $choice in
                         "a") res=$(add $num1 $num2) ;;
@@ -169,8 +166,7 @@ while true; do
                         "d") res=$(divide $num1 $num2) ;;
                         "e")  res=$(power_of $num1 $num2)  ;;
                         "f")  res=$(modulus $num1 $num2) ;;
-                #"g")  exit 0 ;;
-                #*) echo "Invalid choice!" ;;
+              
         esac
 
         echo "================================================================"
