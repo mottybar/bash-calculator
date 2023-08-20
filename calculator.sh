@@ -1,11 +1,11 @@
 #!/bin/bash 
 
-:
+
 
 #########################################################
 
 add() {
-result=$(( $1 + $2 ))
+local result=$(( $1 + $2 ))
 
 echo $result
 }
@@ -22,7 +22,7 @@ fi
 
 
 is_odd_even() {
-num="$1"
+local num="$1"
 if (($((num % 2)) == 0))
 then
 echo "even"
@@ -90,13 +90,13 @@ fi
 ######################################################################
 
 multiply() {
-if ( num_of_arg $1 $2 $3 );then
-	if ( (is_integer $1) && (is_integer $2)  );then
-        	echo $(($1 * $2))
-	fi
-fi
-}
+local n1=$1
+local n2=$2
 
+res=$((n1*n2))
+echo $res
+
+}
 divide(){
 
 		if (( $2 != 0 )) ;then  # check if the second argument is not 0 
@@ -104,13 +104,13 @@ divide(){
 		else
 			echo "cannot divide by 0"
 		fi
-  
+
 }
 
 
 
 is_prime(){
-num=$1
+local num=$1
 is_prime=0
 if [[ $num -le 1 ]];then
 	echo "$num is not a prime number"
